@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "b79cf3c7-c91d-4d32-86e1-2427ada43429",
+		"name": "Zain",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2780720"
+	},
+	"item": [
+		{
+			"name": "Main",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9595/expenses/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9595",
+					"path": [
+						"expenses",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Expense",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"item\": \"Potato 2 KG\",\n    \"item_price\": \"250\",\n    \"budget_provided\": \"500\",\n    \"giver_person\": \"Amma\",\n    \"taker_person\": \"Zain\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9595/expenses/saveExpense",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9595",
+					"path": [
+						"expenses",
+						"saveExpense"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Expense",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"item\": \"Potato 2 KG\",\n    \"item_price\": \"250\",\n    \"budget_provided\": \"510\",\n    \"giver_person\": \"Amma\",\n    \"taker_person\": \"Zain\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9595/expenses/updateExpense",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9595",
+					"path": [
+						"expenses",
+						"updateExpense"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Expense",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9595/expenses/deleteExpense",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9595",
+					"path": [
+						"expenses",
+						"deleteExpense"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
